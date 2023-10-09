@@ -1,0 +1,136 @@
+@font-face {
+	font-family: Inter;
+	src: url(./assets/Inter-Light.ttf);
+	font-weight: 300;
+}
+@font-face {
+	font-family: Inter;
+	src: url(./assets/Inter-Medium.ttf);
+	font-weight: 500;
+}
+@font-face {
+	font-family: Inter;
+	src: url(./assets/Inter-Bold.ttf);
+	font-weight: 700;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+main {
+	min-height: 100vh;
+	background-image: url(./assets/pattern-curve.svg);
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	padding: 50px 0px;
+    overflow: hidden;
+}
+.bio q {
+	font-size: 32px;
+}
+.bio p {
+	font-size: 21px;
+}
+.bio p span {
+	color: darkgray;
+}
+.tribute {
+	width: 75%;
+}
+.bio img {
+	top: -20%;
+	left: 10%;
+}
+.profile > img {
+	z-index: -1;
+	object-fit: contain;
+}
+.bio,
+.profile {
+	flex: 1;
+	color: black;
+}
+.bio {
+	margin-right: -30px;
+	z-index: 30;
+}
+.profile {
+	margin-left: -30px;
+}
+.opacity-0 {
+	visibility: hidden;
+}
+img.profile {
+	max-width: 550px;
+	width: 100%;
+	flex: none;
+}
+.controls {
+	bottom: -30px;
+	right: 30%;
+	width: 100px;
+	background-color: white;
+	border-radius: 30px;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+	padding: 20px 0px;
+}
+.controls a {
+	flex: 1;
+	filter: brightness(0.5);
+}
+
+@media (max-width: 768px) {
+	.bio-con {
+		flex-direction: column-reverse;
+		gap: 100px;
+	}
+    .bio{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .profile{
+        margin: 0;
+    }
+	.profile > img {
+		width: 120%;
+	}
+	.bio q {
+		text-align: center;
+	}
+    .bio p {
+        text-align: center;
+    }
+    .bio p span {
+        display: block;
+    }
+    .bio img {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .controls {
+        bottom: 43%;
+        right: 30%;
+    }
+}
+@media (max-width: 480px) {
+	.bio q {
+		font-size: 22px;
+	}
+	.bio p {
+		font-size: 15px;
+	}
+    img.profile {
+        width: 90%;
+    }
+    .tribute {
+        width: 85%;
+    }
+    .controls {
+        bottom: 55%;
+        right: 30%;
+    }
+}
